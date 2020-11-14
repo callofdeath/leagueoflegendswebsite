@@ -1,0 +1,81 @@
+.navbar {
+    border: black 1px solid;
+    margin: 1%;
+}
+
+img {
+    width    : 20%;
+    /* height: 320px; */
+}
+
+.cards {
+    display  : flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width     : 46%;
+    margin    : 2%;
+    text-align: center;
+}
+
+.card img {
+    margin: 0 auto;
+    width : 50px;
+    height: auto;
+}
+
+@media (max-width:1200px) and (min-width:992px) {
+
+    /* dikke priem kwa looks dus dit maar gedaan */
+    .carousel::before {
+        content: "width between 992 and 1200"
+    }
+
+}
+
+@media (max-width:992px) and (min-width:768px) {
+
+    /* nog steeds dikke priem kwa looks*/
+    .carousel::before {
+        content: "width between 768 and 992"
+    }
+
+}
+
+@media (max-width:768px) and (min-width:576px) {
+
+    .carousel::before {
+        content: "width between 576 and 768"
+    }
+
+    .navbar {
+        display       : flex;
+        flex-direction: column;
+        font-size     : 26px;
+    }
+
+    .card {
+        width: max-content;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    /* zelfde styling werkt hiero */
+
+    .carousel::before {
+        content: "width below 576"
+    }
+
+    .navbar {
+        display       : flex;
+        flex-direction: column;
+        font-size     : 26px;
+    }
+
+    .card {
+        width: max-content;
+    }
+}
